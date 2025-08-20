@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lumi.Views.InitialPage"
+              Shell.NavBarIsVisible="False"
+              BackgroundColor="#FFFFFF">
+    <VerticalStackLayout>
+        <Image Source="logo.png" HeightRequest="550" WidthRequest="600" Margin="0,0,0,0"></Image>
+
+        <Grid Margin="0,-150,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Button Grid.Row="0"  x:Name="login" Text="Login" FontAttributes="Bold" TextColor="#67a6d5" BackgroundColor="#E7E7E7" WidthRequest="300" HeightRequest="70" 
+                CornerRadius="40" Clicked="login_Clicked"  FontFamily="InterBold" FontSize="18" Margin="0,120,0,0"></Button>
+
+        <Button  Grid.Row="1" x:Name="register" Text="Cadastre-se"  FontAttributes="Bold"
+                TextColor="#67a6d5" BackgroundColor="#E7E7E7" Clicked="register_Clicked"  WidthRequest="300" HeightRequest="70" CornerRadius="40" FontFamily="InterBold" FontSize="18" Margin="0,65,0,0"></Button>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
