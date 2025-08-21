@@ -3,20 +3,24 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Lumi.Views.LoginPage"
               Shell.NavBarIsVisible="False"
-              BackgroundColor="AntiqueWhite">
+              BackgroundImageSource="background">
     <VerticalStackLayout>
         <Grid>
-            <Grid>
-                <ImageButton Source="back.png" x:Name="voltar" HeightRequest="40" WidthRequest="100" CornerRadius="36" HorizontalOptions="Start" Margin="20,10,0,40" ></ImageButton>
-            </Grid>
-            <Button  x:Name="criar_conta" Text="Criar Conta" HeightRequest="40" WidthRequest="200" CornerRadius="36" HorizontalOptions="End" FontSize="16" TextColor="#67a6d5" Margin="0,20,0,0" BackgroundColor="Transparent"></Button>
+            <ImageButton Source="back.png" x:Name="voltar" HeightRequest="40" WidthRequest="100" CornerRadius="36" HorizontalOptions="Start" Margin="20,40,0,40"></ImageButton>
+            <Button  x:Name="criar_conta" Text="Criar Conta" HeightRequest="40" WidthRequest="150" CornerRadius="36" HorizontalOptions="End" FontSize="16" TextColor="#67a6d5" Margin="0,20,0,0" BackgroundColor="#e7e7e7" FontFamily="chuckFive"></Button>
         </Grid>
 
-
-        <Image Source="logo.png" HorizontalOptions="Center" HeightRequest="100"/>
-        <Label Text="Entre no Lumi " TextColor="#67a6d5" HorizontalOptions="Center" FontSize="33" FontFamily="InterBold" FontAttributes="Bold"/>
-
-        <Grid BackgroundColor="#FFFFFF" HeightRequest="420" WidthRequest="350" Margin="0,40,0,0">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            
+            <Image Grid.Row="0"  Source="icone.png" HorizontalOptions="Start" HeightRequest="200" BackgroundColor="Transparent"/>
+                <Label Grid.Row="0" Text="Entre no Lumi " TextColor="#67a6d5" HorizontalOptions="Center" VerticalOptions="Center" Margin="30,30,0,0" FontSize="33" FontFamily="chuckFive"/>
+        </Grid>
+         
+            
+            <Grid  HeightRequest="420" WidthRequest="350" Margin="0,40,0,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -44,7 +48,7 @@
             </Grid>
 
 
-            <Button Grid.Row="4" CornerRadius="30" Text="Entrar" Margin="0,0,0,0" BackgroundColor="#e7e7e7" TextColor="#4F1271" HeightRequest="60" WidthRequest="290" FontSize="17" FontAttributes="Bold" FontFamily="InterBold" Command="{Binding RegistrarCommand}"></Button>
+            <Button Grid.Row="4" CornerRadius="30" Text="Entrar" Margin="0,0,0,0" BackgroundColor="#e7e7e7" TextColor="#67a6d5" HeightRequest="60" WidthRequest="290" FontSize="17" FontAttributes="Bold" FontFamily="InterBold" Command="{Binding RegistrarCommand}"></Button>
             <Button Grid.Row="5" Text="Esqueceu sua senha?" TextColor="Black" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End" Margin="0,120,0,0"/>
 
         </Grid>
@@ -59,17 +63,15 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
+
+                <Label Grid.Row="1" Text="Entrar utilizando uma conta Google" WidthRequest="100" HorizontalOptions="Start" Margin="30,0,0,0"/>
+                
+                <Border Grid.Row="1" StrokeShape="RoundRectangle 10 10 10 10" BackgroundColor="#e7e7e7" Margin="20,0,20,0" WidthRequest="50" HorizontalOptions="Center"  HeightRequest="50">
+                    <Image Grid.Row="1" Source="google" HorizontalOptions="Center" HeightRequest="300" Margin="30,0,0,0"/>
+                </Border>
+                
+
               
-
-                <Border Grid.Row="1" StrokeShape="RoundRectangle 10 10 10 10" BackgroundColor="#e7e7e7" Margin="20,30,20,0" WidthRequest="150" HorizontalOptions="Start" HeightRequest="55">
-                    <Button Text="GOOGLE" Grid.Row="1" TextColor="#4F1271" BackgroundColor="#e7e7e7" FontFamily="InterBold" FontSize="16" FontAttributes="Bold" HorizontalOptions="End" Margin="0,0,10,0"/>
-                </Border>
-                <Image Grid.Row="1" Source="google" HorizontalOptions="Start" HeightRequest="45" Margin="30,25,0,0"/>
-
-                <Border Grid.Row="1" StrokeShape="RoundRectangle 10" BackgroundColor="#e7e7e7" Margin="20,30,20,0" WidthRequest="150" HorizontalOptions="End" HeightRequest="55">
-                    <Button Text="LINKEDIN" Grid.Row="1" TextColor="#4F1271" BackgroundColor="#e7e7e7" FontFamily="InterBold" FontAttributes="Bold" FontSize="16" HorizontalOptions="End" Margin="0,0,0,0"/>
-                </Border>
-                <Image Grid.Row="1" Source="linkedin" HorizontalOptions="Center" HeightRequest="45" Margin="130,27,0,0"/>
 
 
 

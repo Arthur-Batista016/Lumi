@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lumi.Views.HomePage"
+              Shell.NavBarIsVisible="False"
+              BackgroundColor="#FFFFFF"
+             >
+    <VerticalStackLayout>
+        
+        <Grid>
+            <Border BackgroundColor="#e7e7e7">
+                <Label Text="Olá Fulano" HorizontalOptions="Start" FontSize="15"/>
+                
+            </Border>
+        </Grid>
+        
+        
+        
+        
+        
+    </VerticalStackLayout>
+</ContentPage>
