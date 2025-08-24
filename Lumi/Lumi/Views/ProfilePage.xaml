@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lumi.Views.ProfilePage"
+             Shell.NavBarIsVisible="False">
+    <ScrollView>
+        <VerticalStackLayout>
+            <ImageButton Source="back.png" x:Name="voltar" Clicked="voltar_Clicked" HeightRequest="50" WidthRequest="100" CornerRadius="36" HorizontalOptions="Start" Margin="0,40,0,0"></ImageButton>
+            <Grid Margin="0,-70,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+             </Grid.RowDefinitions>
+            
+            <ImageButton Grid.Row="0" x:Name="profile" Source="profile" HeightRequest="200" HorizontalOptions="Center" Margin="0,100,0,0"/>
+            <Label Grid.Row="1" Text="Bilinho" HorizontalOptions="Center" FontSize="20" Margin="0,20,0,0" FontFamily="chuckFive"/>
+                <Label Grid.Row="2"  Text="16 anos" HorizontalOptions="Center" FontSize="20" Margin="0,20,0,0" />
+                <Label Grid.Row="3" Text="Guarulhos-SP" HorizontalOptions="Center" FontSize="18" Margin="0,20,0,0" />
+                <Label Grid.Row="4" Text="Apenas um estudante do ensino médio em busca de novos conhecimentos" WidthRequest="300" Margin="0,30,0,0" />
+           
+            </Grid>
+
+        <Grid Margin="0,100,0,0">
+            <Label Text="Historico de Aulas" HorizontalOptions="Center" FontSize="20" FontFamily="chuckFive"/>
+            <Border StrokeShape="RoundRectangle 10" BackgroundColor="#e7e7e7" WidthRequest="380" HeightRequest="200" Margin="0,50,0,0">
+                <VerticalStackLayout>
+                    <Image Source="professor" HeightRequest="200" HorizontalOptions="Start" Margin="-10,0,0,0"/>
+                    <Label Text="Walter White" HorizontalOptions="End" VerticalTextAlignment="Start" Margin="0,-160,40,0" FontFamily="chuckFive" FontSize="20"/>
+                    <Label Text="Materia: Química" HorizontalOptions="End" FontSize="17" Margin="0,30,30,0"/>
+                    <Label Text="Dia(s): Seg , Ter" HorizontalOptions="End" FontSize="17" Margin="0,0,47,0"/>
+                    <Label Text="Horário: 11h - 13h" HorizontalOptions="End" FontSize="17" Margin="0,0,26,0"/>
+                </VerticalStackLayout>
+            </Border>
+        </Grid>
+
+        <Button Text="Sair" x:Name="sair" Clicked="sair_Clicked" TextColor="red" FontFamily="chuckFive" BackgroundColor="#e7e7e7" WidthRequest="170" Margin="0,100,0,40" />
+
+    </VerticalStackLayout>
+    </ScrollView>
+    
+</ContentPage>

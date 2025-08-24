@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lumi.Views.AboutUsPage"
+             Shell.NavBarIsVisible="False"
+             >
+    <ScrollView>
+        <VerticalStackLayout>
+        
+        <ImageButton Source="back.png" x:Name="voltar"  Clicked="voltar_Clicked" HeightRequest="50" WidthRequest="100" CornerRadius="36" HorizontalOptions="Start" Margin="0,40,0,0"></ImageButton>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+            
+            <Image Grid.Row="0" Source="logo" HorizontalOptions="Center" HeightRequest="500" VerticalOptions="Start" Margin="0,-100,0,0"/>
+
+
+                <Label  Grid.Row="1" Text="Servico" HorizontalOptions="Center" FontSize="30" FontFamily="chuckFive" Margin="0,-100,0,0" TextColor="#274891"/>
+            <Label  Grid.Row="2" WidthRequest="350" Margin="0,-60,0,0" Text="Somos uma plataforma de ensino que conecta alunos e responsáveis a professores qualificados de diversas áreas do conhecimento,  oferecendo aulas particulares. Atendemos estudantes do 1º ano do Ensino Fundamental até o 3º ano do Ensino Médio, na cidade de Guarulhos."/>
+
+                <Label  Grid.Row="3" Text="Como Funciona?" Margin="0,80,0,10" HorizontalOptions="Center" FontFamily="chuckFive" FontSize="30" TextColor="#274891"/>
+            <Label  Grid.Row="4" WidthRequest="350" Text="Os professores interessados se cadastram no aplicativo e enviam seus currículos. Depois de avaliados e aprovados, eles passam a fazer parte da nossa lista de profissionais disponíveis. Quando o aluno ou responsável acessa a plataforma, ele escolhe a matéria que deseja aprender e encontra uma lista de professores que atendem a essa área. O sistema mostra informações como a localização de cada professor, os horários e datas disponíveis, a opção de aulas online ou presenciais e também o perfil de cada educador. Assim, o aluno pode escolher o professor que mais se encaixa em suas necessidades, fazer o agendamento da aula e realizar o pagamento por hora/aula pelo próprio aplicativo de forma prática e segura."/>
+
+                <Label  Grid.Row="5" Text="Missao" Margin="0,70,0,10" HorizontalOptions="Center" FontFamily="chuckFive" FontSize="30" TextColor="#274891"/>
+            <Label  Grid.Row="6" WidthRequest="370" Text="Oferecer aos alunos e professores uma forma simples, acessível e segura de se encontrarem, oferecendo um espaço que valoriza a educação personalizada e a qualidade do ensino, para que cada aluno alcance seu potencial máximo"/>
+
+                <Label  Grid.Row="7" Text="Visao" Margin="0,60,0,10" HorizontalOptions="Center" FontFamily="chuckFive" FontSize="30" TextColor="#274891"/>
+            <Label  Grid.Row="8" WidthRequest="350" Text="Ser a principal plataforma de referência em aulas particulares no Brasil, reconhecida por transformar a maneira como alunos aprendem e professores ensinam, tornando o conhecimento mais acessível e inovador."/>
+
+                <Label  Grid.Row="9" Text="Valores" HorizontalOptions="Center" Margin="0,60,0,20" FontFamily="chuckFive" FontSize="30" TextColor="#274891"/>
+            <Label Grid.Row="10" Text="● Educação de Qualidade – oferecer aulas eficazes com professores qualificados." WidthRequest="300"/>
+             <Label Grid.Row="11" Text="● Acessibilidade – tornar o ensino personalizado prático e justo." WidthRequest="300" Margin="0,15,0,0"/>
+             <Label Grid.Row="12" Text="● Transparência – promover relações claras e confiáveis." WidthRequest="300" Margin="0,15,0,0" />
+             <Label Grid.Row="13" Text="● Inovação – usar tecnologia para aprimorar a experiência de ensino"  WidthRequest="300" Margin="0,15,0,0" />
+             <Label Grid.Row="14" Text="● Valorização do Professor – reconhecer e apoiar o papel do educador." WidthRequest="300" Margin="0,15,0,0" />
+             <Label Grid.Row="15" Text="● Respeito e Diversidade – promover inclusão e acolhimento a todos." WidthRequest="300" Margin="0,15,0,0" />
+                <Label Grid.Row="16" Text="● Compromisso com Resultados – focar no progresso real dos alunos." WidthRequest="300" Margin="0,15,0,0" />
+
+            </Grid>
+    
+    </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

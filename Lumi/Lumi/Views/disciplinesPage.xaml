@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lumi.Views.disciplinesPage"
+              Shell.NavBarIsVisible="False">
+   
+    <ScrollView>
+        <VerticalStackLayout>
+        <Label 
+            Text="ASSINAR UMA DISCIPLINA"
+            Margin="90,40,0,0"
+            HorizontalOptions="Center"
+            FontFamily="chuckFive"
+            WidthRequest="450"
+            FontSize="25"
+         />
+        
+        <Border StrokeShape="RoundRectangle 10" BackgroundColor="#e7e7e7" WidthRequest="300" Margin="0,70,0,0">
+            <Picker
+             x:Name="materias"
+            Title="Escolha uma disciplina"
+             FontFamily="chuckFive"
+             Grid.Row="0"
+             WidthRequest="300"
+             FontSize="20"
+             HorizontalTextAlignment="Center"
+             HorizontalOptions="Center"
+             Margin="0,5,0,0"
+             SelectedIndexChanged="materias_SelectedIndexChanged"
+             >
+            
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Português</x:String>
+                    <x:String>Matemática</x:String>
+                    <x:String>Inglês</x:String>
+                    <x:String>Química</x:String>
+                    <x:String>geografia</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        </Border>
+
+        <Grid x:Name="professores" IsVisible="false" Margin="0,50,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+
+                <Label Grid.Row="0" Text="Professores disponiveis" HorizontalOptions="Center" FontSize="23" FontFamily="chuckFive"/>
+            
+            <Grid Margin="0,20,0,0">
+                    <Border x:Name="bp1" StrokeShape="RoundRectangle 10" BackgroundColor="#B7D0E1" HorizontalOptions="Start" WidthRequest="200" HeightRequest="300" Margin="0,50,0,0">
+                        <VerticalStackLayout>
+                            <ImageButton x:Name="p1" Clicked="p1_Clicked" Source="professor"  Grid.Row="1" HeightRequest="300"   HorizontalOptions="Start" Margin="0,-50,0,0"/>
+                            <Label Grid.Row="2" Text="Walter White" VerticalTextAlignment="End" HorizontalTextAlignment="Start" FontSize="20" Margin="43,-40,0,0" FontFamily="chuckFive"/>
+                            <Label Grid.Row="2" Text="Guarulhos-SP" VerticalTextAlignment="End" HorizontalTextAlignment="Start" FontSize="15" Margin="43,10,0,0" FontFamily="chuckFive"/>
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <Border x:Name="bp2" StrokeShape="RoundRectangle 10" BackgroundColor="#B7D0E1" HorizontalOptions="End" WidthRequest="200" HeightRequest="300" Margin="20,50,0,0">
+                        <VerticalStackLayout>
+                            <ImageButton x:Name="p2" Clicked="p2_Clicked" Grid.Row="1" Source="teacher" HeightRequest="250"   HorizontalOptions="Start" Margin="0,-50,0,0"/>
+                            <Label Grid.Row="2" Text="Rick Sanchez" VerticalTextAlignment="End" HorizontalTextAlignment="Start" FontSize="20" Margin="43,10,0,0" FontFamily="chuckFive"/>
+                            <Label Grid.Row="2" Text="Centro-SP" VerticalTextAlignment="End" HorizontalTextAlignment="Start" FontSize="15" Margin="43,10,0,0" FontFamily="chuckFive"/>
+                        </VerticalStackLayout>
+
+                </Border>
+                </Grid> 
+            
+        </Grid>
+
+            <Grid x:Name="tipo" IsVisible="false" Margin="0,50,0,0">
+                <Label Text="Tipo de Aula" FontSize="20" HorizontalTextAlignment="Center" FontFamily="chuckFive"/>
+                <HorizontalStackLayout Margin="0,40,0,0" HorizontalOptions="Center">
+                    <RadioButton Content="Presencial"
+                      GroupName="Materias"
+                      CheckedChanged="RadioButton_CheckedChanged"
+                    />
+
+                    <RadioButton Content="On-line"
+                       GroupName="Materias"
+                      Margin="20,0,0,0"
+                       CheckedChanged="RadioButton_CheckedChanged"
+                       />
+                </HorizontalStackLayout>
+            </Grid>
+
+            <Grid x:Name="dias" IsVisible="false" Margin="0,-30,0,0">
+
+
+                <Label Text="Escolha os dias que deseja estudar" HorizontalTextAlignment="Center" FontFamily="chuckFive" VerticalTextAlignment="Center" FontSize="17" Margin="0,40,0,0"/>
+                <HorizontalStackLayout Margin="27,100,0,0">
+                    <CheckBox CheckedChanged="opcao1_CheckedChanged"  x:Name="opcao1" />
+                    <Label Text="Seg" Margin="0,12,0,0"/>
+                    <CheckBox CheckedChanged="opcao1_CheckedChanged" x:Name="opcao2"  />
+                    <Label Text="Ter" Margin="0,12,0,0"/>
+                    <CheckBox CheckedChanged="opcao1_CheckedChanged" x:Name="opcao3" />
+                    <Label Text="Qua" Margin="0,12,0,0"/>
+                    <CheckBox CheckedChanged="opcao1_CheckedChanged" x:Name="opcao4" />
+                    <Label Text="Qui" Margin="0,12,0,0"/>
+                    <CheckBox CheckedChanged="opcao1_CheckedChanged" x:Name="opcao5" />
+                    <Label Text="Sex" Margin="0,12,0,0"/>
+                </HorizontalStackLayout>
+            </Grid>
+        
+          
+
+
+            <Grid x:Name="horarios" IsVisible="false" Margin="0,50,0,0">
+                <Label Text="Horarios Disponiveis" FontSize="20" HorizontalTextAlignment="Center" FontFamily="chuckFive"/>
+                <HorizontalStackLayout Margin="27,40,0,0">
+                    <CheckBox CheckedChanged="opcao2_CheckedChanged" x:Name="horario1" />
+                    <Label Text="8:30h - 10h" Margin="0,12,0,0"/>
+                    <CheckBox CheckedChanged="opcao2_CheckedChanged" x:Name="horario2"  />
+                    <Label Text="11h - 13h" Margin="0,12,0,0"/>
+                    <CheckBox CheckedChanged="opcao2_CheckedChanged" x:Name="horario3" />
+                    <Label Text="15h - 17h" Margin="0,12,0,0"/>
+                </HorizontalStackLayout>
+            </Grid>
+
+            <Grid x:Name="pagamento" IsVisible="false" Margin="0,50,0,0">
+               
+                <Border BackgroundColor="#e7e7e7" Margin="0,50,0,0" HeightRequest="420">
+                    
+                    <VerticalStackLayout>
+                        <Label Text="Realizar Pagamento" HorizontalTextAlignment="Center" FontFamily="chuckFive" FontSize="Large" Margin="0,30,0,0"/>
+                        <Label Text="Total:" Margin="0,40,100,0" HorizontalTextAlignment="Center" FontSize="20" FontFamily="chuckFive"/>
+                        <Label Text="50/h" Margin="40,-21,0,0" HorizontalTextAlignment="Center" FontSize="20" FontFamily="chuckFive"/>
+                    <Grid Margin="0,30,0,0">
+                            <Label Text="Foma de Pagamento" HorizontalTextAlignment="Center" FontSize="20" FontFamily="chuckFive"/>
+                            <Border x:Name="borda1" StrokeShape="RoundRectangle 10" BackgroundColor="#B7D0E1" HorizontalOptions="Start" WidthRequest="120" HeightRequest="120" Margin="0,50,0,0">
+                                <VerticalStackLayout>
+                                    <Image Source="pix" HeightRequest="80"/>
+                                    <Button Text="Pix" x:Name="pix" Clicked="pix_Clicked_1" TextColor="Black" FontSize="25" BackgroundColor="Transparent" FontFamily="chuckFive" Margin="0,-10,0,0"/>
+                                </VerticalStackLayout>
+                            </Border>
+                            <Border x:Name="borda2" StrokeShape="RoundRectangle 10" BackgroundColor="#B7D0E1"  WidthRequest="120" HeightRequest="130"  HorizontalOptions="Center"  Margin="0,50,0,0">
+                                <VerticalStackLayout>
+                                    <Image Source="card" HeightRequest="80"/>
+                                    <Button x:Name="debito" Text="Debito" Clicked="debito_Clicked" TextColor="Black" FontSize="25" BackgroundColor="Transparent" FontFamily="chuckFive" Margin="0,-10,0,0"/>
+                                </VerticalStackLayout>
+                            </Border>
+                            <Border x:Name="borda3" StrokeShape="RoundRectangle 10" BackgroundColor="#B7D0E1"  WidthRequest="120" HeightRequest="130"  HorizontalOptions="End" Margin="0,50,0,0">
+                                <VerticalStackLayout>
+                                    <Image Source="card" HeightRequest="80"/>
+                                    <Button Text="Credito" x:Name="credito" Clicked="credito_Clicked" TextColor="Black" FontSize="25" BackgroundColor="Transparent" FontFamily="chuckFive" Margin="0,-10,0,0"/>
+                                </VerticalStackLayout>
+                            </Border>
+
+                           
+                        </Grid>
+                        <Button x:Name="confirmar" Clicked="confirmar_Clicked" FontFamily="chuckFive" Text="Confirmar Compra" HeightRequest="50"  WidthRequest="200" BackgroundColor="#00a300"  Margin="0,40,0,0"/>
+                    </VerticalStackLayout>
+                </Border>
+            </Grid>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

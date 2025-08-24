@@ -6,8 +6,8 @@
               BackgroundImageSource="background">
     <VerticalStackLayout>
         <Grid>
-            <ImageButton Source="back.png" x:Name="voltar" HeightRequest="40" WidthRequest="100" CornerRadius="36" HorizontalOptions="Start" Margin="20,40,0,40"></ImageButton>
-            <Button  x:Name="criar_conta" Text="Criar Conta" HeightRequest="40" WidthRequest="150" CornerRadius="36" HorizontalOptions="End" FontSize="16" TextColor="#67a6d5" Margin="0,20,0,0" BackgroundColor="#e7e7e7" FontFamily="chuckFive"></Button>
+            <ImageButton Source="back.png" x:Name="voltar" Clicked="voltar_Clicked" HeightRequest="40" WidthRequest="100" CornerRadius="36" HorizontalOptions="Start" Margin="20,40,0,40"></ImageButton>
+       
         </Grid>
 
         <Grid>
@@ -29,11 +29,11 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
-            <Grid Grid.Row="0" Margin="0,30,0,0">
+            <Grid Grid.Row="0" Margin="0,-30,0,0">
 
-                <Label Text="E-mail" Margin="30,0,0,0" FontSize="20"/>
+                <Label Text="E-mail" Margin="30,0,0,0" FontSize="20" FontFamily="chuckFive" TextColor="#a5a5a5"/>
                 <Border StrokeShape="RoundRectangle 30" BackgroundColor="#e7e7e7" Margin="0,30,20,0" WidthRequest="300" HorizontalOptions="Center" HeightRequest="50">
-                    <Entry Grid.Row="1"  PlaceholderColor="#854F1271" Margin="10,0,0,0" FontAttributes="Bold" FontFamily="InterBold" HeightRequest="55"></Entry>
+                    <Entry Grid.Row="1" x:Name="emailText"  PlaceholderColor="#854F1271" Margin="10,0,0,0" FontAttributes="Bold" FontFamily="InterBold" HeightRequest="55"></Entry>
                 </Border>
 
 
@@ -41,44 +41,20 @@
             </Grid>
 
             <Grid Grid.Row="1" Margin="0,30,0,0">
-                <Label Text="Senha" Margin="30,0,0,0" FontSize="20"/>
+                <Label Text="Senha" Margin="30,0,0,0" FontSize="20" FontFamily="chuckFive" TextColor="#a5a5a5"/>
                 <Border StrokeShape="RoundRectangle 30" BackgroundColor="#e7e7e7" Margin="0,30,20,0" WidthRequest="300" HorizontalOptions="Center" HeightRequest="50">
-                    <Entry Grid.Row="1"  PlaceholderColor="#854F1271" Margin="10,0,0,0" FontAttributes="Bold" FontFamily="InterBold" HeightRequest="55"></Entry>
+                    <Entry Grid.Row="1" x:Name="senhaText"  PlaceholderColor="#854F1271" Margin="10,0,0,0" FontAttributes="Bold" FontFamily="InterBold" HeightRequest="55"></Entry>
                 </Border>
             </Grid>
 
 
-            <Button Grid.Row="4" CornerRadius="30" Text="Entrar" Margin="0,0,0,0" BackgroundColor="#e7e7e7" TextColor="#67a6d5" HeightRequest="60" WidthRequest="290" FontSize="17" FontAttributes="Bold" FontFamily="InterBold" Command="{Binding RegistrarCommand}"></Button>
+            <Button Grid.Row="4" x:Name="entrar"
+                    CornerRadius="30" Text="Entrar" Clicked="entrar_Clicked" Margin="0,0,0,0" BackgroundColor="#e7e7e7" TextColor="#67a6d5" HeightRequest="60" WidthRequest="290" FontSize="17" FontAttributes="Bold" FontFamily="InterBold" Command="{Binding RegistrarCommand}"></Button>
             <Button Grid.Row="5" Text="Esqueceu sua senha?" TextColor="Black" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="End" Margin="0,120,0,0"/>
 
         </Grid>
 
-        <Grid>
-
-
-            <Grid Margin="0,20,0,0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-
-
-                <Label Grid.Row="1" Text="Entrar utilizando uma conta Google" WidthRequest="100" HorizontalOptions="Start" Margin="30,0,0,0"/>
-                
-                <Border Grid.Row="1" StrokeShape="RoundRectangle 10 10 10 10" BackgroundColor="#e7e7e7" Margin="20,0,20,0" WidthRequest="50" HorizontalOptions="Center"  HeightRequest="50">
-                    <Image Grid.Row="1" Source="google" HorizontalOptions="Center" HeightRequest="300" Margin="30,0,0,0"/>
-                </Border>
-                
-
-              
-
-
-
-            </Grid>
-
-
-        </Grid>
+       
 
     </VerticalStackLayout>
 </ContentPage>
